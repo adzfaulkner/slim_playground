@@ -6,7 +6,7 @@ return [
         'db'    => [
             'driver'   => '',
             'host'     => 'localhost',
-            'dbname'   => 'main',
+            'dbname'   => '',
             'user'     => '',
             'password' => '',
         ],
