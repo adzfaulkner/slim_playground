@@ -1,0 +1,32 @@
+    {% extends "layout.html" %}
+    {% block content %}
+     <h1>Comments</h1>
+     {% if success is defined %}
+     {% if success %}
+     <div class="alert alert-success" role="alert">{{ message }}</div>
+     {% else %}
+     <div class="alert alert-danger" role="alert">{{ message }}</div>
+     {% endif %}
+     {% endif %}
+     <div class="row marketing">
+        <form action="/comment" method="post">
+          <div class="form-group">
+            <label for="emailIB">Email</label>
+            <p class="form-control-static">{{ email }}</p>
+          </div>
+          <div class="form-group">
+            <label for="subjectDD">Subject</label>
+            <select id="subjectDD" name="subject" class="form-control">
+                <option>General</option>
+                <option>Enquiry</option>
+                <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="commentsTB">Comments</label>
+            <textarea id="commentsTB" name="comments" class="form-control" rows="10"></textarea>
+          </div>            
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+     </div>
+    {% endblock %}
